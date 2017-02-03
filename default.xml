@@ -26,7 +26,7 @@
   <project path="manifest" name="android_manifest" remote="asc" revision="n" />
   <project path="external/busybox" name="android_external_busybox" remote="asc" revision="n" />
   <project path="external/clang" name="android_external_clang" groups="pdk" remote="asc" revision="n" />
-  <project path="external/llvm" name="andorid_external_llvm" groups="pdk" remote="asc" revision="n" />
+  <project path="external/llvm" name="android_external_llvm" groups="pdk" remote="asc" revision="n" />
   <project path="external/nanopb-c" name="android_external_nanopb-c" groups="pdk" remote="asc" revision="n" />
   <project path="external/sqlite" name="android_external_sqlite" groups="pdk" remote="asc" revision="n" />
   <project path="external/svox" name="android_external_svox" groups="pdk-cw-fs,pdk-fs" remote="asc" revision="n" />
