@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
   <remote  name="github"
            fetch="https://github.com" />
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com" />
+  <!-- Main source -->
   <remote name="asc"
            fetch="https://github.com/AscendToDev/" /> 
+  <!-- Device source -->
+  <remote name="ascd"
+           fetch="https://github.com/zengfu94/" /> 
   <default revision="refs/tags/android-7.1.1_r13"
            remote="aosp"
            sync-c="true"
@@ -55,6 +58,20 @@
   <project path="system/extras" name="android_system_extras" groups="pdk" remote="asc" revision="n" />
   <project path="system/netd" name="android_system_netd" groups="pdk" remote="asc" revision="n" />
   <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="asc" revision="n" />
+
+  <!-- Kernel repos -->
+  <project path="kernel/google/dragon" name="android_kernel_google_dragon" groups="device,dragon" remote="ascd" revision="android-7.1" />
+  <project path="kernel/google/marlin" name="android_kernel_google_marlin" groups="device,marlin" remote="ascd" revision="android-7.1" />
+  <project path="kernel/huawei/angler" name="android_kernel_huawei_angler" groups="device,angler,broadcom_pdk" remote="ascd" revision="android-7.1" />
+  <project path="kernel/lge/bullhead" name="android_kernel_lge_bullhead" groups="device,bullhead" remote="ascd" revision="android-7.1" />
+  <project path="kernel/moto/shamu" name="android_kernel_moto_shamu" groups="device,shamu,broadcom_pdk" remote="ascd" revision="android-7.1" />
+
+  <!-- Vendor repos -->
+  <project path="vendor/google_devices" name="proprietary_vendor_google_devices" remote="ascd" revision="android-7.1" />
+  <project path="vendor/huawei" name="proprietary_vendor_huawei" remote="ascd" revision="android-7.1" />
+  <project path="vendor/lge" name="proprietary_vendor_lge" remote="ascd" revision="android-7.1" />
+  <project path="vendor/moto" name="proprietary_vendor_moto" remote="ascd" revision="android-7.1" />
+  <project path="vendor/prebuilt" name="android_vendor_prebuilt" remote="ascd" revision="android-7.1" />
 
   <!-- AOSP repos -->
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
